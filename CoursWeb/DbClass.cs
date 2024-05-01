@@ -6,9 +6,9 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-namespace BanhangOffline
+namespace CoursWeb
 {
-    public static class DBClass
+    public static class DbClass
     {
         // thu phuong an voi localdb
         public static DataTable tbGioHang = new DataTable();

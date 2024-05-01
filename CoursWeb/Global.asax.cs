@@ -5,7 +5,9 @@ using System.Web;
 using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
+using System.Data.Entity;
 using System.Web.SessionState;
+using CoursWeb.Models;
 
 namespace CoursWeb
 {
@@ -16,6 +18,7 @@ namespace CoursWeb
             // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            
         }
     }
 }

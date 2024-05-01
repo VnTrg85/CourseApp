@@ -44,9 +44,9 @@
                 <p class="cat">Categories</p>
                 <input class="search-input" placeholder="Search for courses" type="text"/>
                 <a class="link" href="/about">About</a>
-                <a class="link" href="/contact">Contact</a>
-                <button class ="btn-login">Login</button>
-                <button class ="btn-signup">Signup</button>        
+                <a class="link" href="/contact">Contact</a> 
+                <asp:LinkButton runat="server" ID="login" OnClick="Login_Click" CssClass="btn-login link"></asp:LinkButton>
+                <asp:LinkButton runat="server" ID="logout" OnClick="Logout_Quanly_Click" CssClass="btn-signup link"></asp:LinkButton>                                                        
             </div>
 
             <div class="body-content">

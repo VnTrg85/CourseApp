@@ -10,15 +10,24 @@
 namespace CoursWeb {
     
     
-    public partial class _Default {
+    public partial class CourseDetail {
         
         /// <summary>
-        /// courseList control.
+        /// courseDetail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView courseList;
+        protected global::System.Web.UI.WebControls.FormView courseDetail;
+        
+        /// <summary>
+        /// lessonList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView lessonList;
     }
 }

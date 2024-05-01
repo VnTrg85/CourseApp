@@ -10,33 +10,33 @@
 namespace CoursWeb {
     
     
-    public partial class SiteMaster {
+    public partial class Login {
         
         /// <summary>
-        /// login control.
+        /// Username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton login;
+        protected global::System.Web.UI.WebControls.TextBox Username;
         
         /// <summary>
-        /// logout control.
+        /// Password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton logout;
+        protected global::System.Web.UI.WebControls.TextBox Password;
         
         /// <summary>
-        /// MainContent control.
+        /// statusMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Label statusMessage;
     }
 }
