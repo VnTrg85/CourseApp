@@ -6,8 +6,8 @@ body {
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    width: 100%;
+
 }
 
 /* Set widths on the form inputs since otherwise they're 100% wide */
@@ -17,23 +17,15 @@ textarea {
 }
 
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .jumbotron {
-        margin-top: 20px;
-    }
-
-    .body-content {
-        padding: 0;
-    }
-}
 .link {
     text-decoration: none;
     color: black;
 }
 .link:hover {
     text-decoration: none;
-    color: black;
+}
+.mb2 {
+    margin-bottom: 2px;
 }
 .container {
     width: 1028px;
@@ -52,6 +44,7 @@ textarea {
     align-items: center;
     gap: 20px;
 }
+
 .title {
     font-size: 20px;
     font-weight: 900;
@@ -64,6 +57,7 @@ textarea {
     margin: 0;
     cursor: pointer;
 }
+
 
 .search-input {
     width: 500px;
@@ -83,7 +77,11 @@ textarea {
     height: 40px;
     font-weight: 600;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content:center;
 }
+
 .btn-signup {
     color: white;
     background: black;
@@ -92,4 +90,188 @@ textarea {
     outline: none;
     font-weight: 600;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.homeImg {
+    width: 142.5%;
+    margin-left: -210px;
+}
+.courseContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-gap: 20px;
+}
+
+.courseItem {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #c333;
+}
+.homeTitle {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.courseImg {
+    width: 100%;
+    height: 300px;
+}
+.courseName {
+    text-align: center;
+}
+.courseName, .coursePrice {
+    font-size: 16px;
+    font-weight: 800;
+   
+}
+.coursePrice {
+    color: #608158;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+.loginContainer {
+    margin-top: 30px;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f1ebf5;
+}
+.loginTitle {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 0px;
+}
+.loginSubTitle {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.loginContainer input{
+    width: 40%;
+    height: 50px;
+    outline: none;
+    border: 1px solid #c3333;
+    border-radius: 5px;
+    padding: 0 5px;
+    margin: 5px 0;
+}
+.login-btn {
+    margin-top: 5px;
+    width: 40%;
+    height: 45px;
+    background: #a535f0;
+    outline: none;
+    border: none;
+    font-size:15px;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.courseDetail { 
+    display: flex;
+    flex-direction: column;
+}
+
+.detailTop {
+    display: flex;
+    grid-gap: 20px;
+    justify-content: space-between;
+    
+}
+.detailTop img{
+    width: 40%;
+    height: 300px;
+}
+.nameanddesc {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+}
+
+.courseDetailName {
+    font-size: 20px;
+    font-weight: 700;
+}
+.courseDesc {
+    width: 80%;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.detailBottom {
+    display: flex;
+   justify-content: space-between;
+}
+.lessonHeader {
+    font-size:20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.lessonContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 5px;
+
+}
+.lessonItem {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    grid-gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    border: 1px solid #d1d7db;
+    background: #f7f9fa;
+}
+.lessonName {
+    font-size: 15px;
+    font-weight: 800;
+    
+ 
+}
+.lessonDesc {
+   
+    font-size: 13px;
+    font-weight: 600;
+}
+.buttons {
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 5px;
+}
+.addCartBtn {
+    width: 300px;
+    height: 50px;
+    background: #a535f0;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    font-weight: 800;
+}
+.buyBtn {
+    width: 300px;
+    height: 50px;
+    background: white;
+    color: black;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid #2d2f31;
+    font-weight: 800;
 }
