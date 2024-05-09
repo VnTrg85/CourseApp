@@ -11,7 +11,7 @@
                 <EmptyDataTemplate>
                     <table >
                         <tr>
-                            <td>Khong co khoa hoc nao</td>
+                            <td>No result was found</td>
                         </tr>
                     </table>
                     

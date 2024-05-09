@@ -26,6 +26,7 @@ namespace CoursWeb
                 Session["Username"] = query.First().Username;
 
                 Session["isAdmin"] = query.First().isAdmin;
+                Session["UserID"] = query.First().AccountID;
                 Response.Redirect("/");
                 statusMessage.Text = "";
             }
