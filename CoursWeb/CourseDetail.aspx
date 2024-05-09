@@ -30,7 +30,7 @@
             </asp:ListView> 
         </div>
         <div class="buttons">
-            <button class="addCartBtn">Add to cart</button>
+            <asp:LinkButton runat="server" CssClass="addCartBtn link" OnClick="AddToCart_Click">Add to cart</asp:LinkButton>
             <button class="buyBtn">Buy now</button>
 
         </div>

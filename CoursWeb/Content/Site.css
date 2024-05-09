@@ -178,6 +178,12 @@ textarea {
     justify-content: center;
     align-items:center;
 }
+.search-btn img {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    object-fit:cover;
+}
 
 .courseDetail { 
     display: flex;
@@ -264,6 +270,8 @@ textarea {
     outline: none;
     border: none;
     font-weight: 800;
+    align-content:center;
+    text-align: center;
 }
 .buyBtn {
     width: 300px;
@@ -274,4 +282,126 @@ textarea {
     outline: none;
     border: 1px solid #2d2f31;
     font-weight: 800;
+}
+
+.userContainer {
+    display: flex;
+    justify-content: center;
+}
+.userLeft {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 10px;
+    flex: 1;
+    padding-top: 10px;
+    border-radius: 5px;
+}
+.btn-User {
+    padding: 10px 10px;
+    width: 200px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 1px solid #d1d7db;
+}
+.userRight {
+    margin-top: 20px;
+    flex: 3;
+}
+.header-table {
+    color: white;
+    background: #6f7bd8;
+    padding-left: 2px;
+    height: 50px;
+    text-align:center;
+    border-bottom: 2px solid black;
+
+}
+.item-table {
+    padding: 10px 2px;
+    text-align: center;
+    background: white;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.info-user {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #d1d7db;
+    border-radius: 5px;
+    padding: 0 0 20px;
+}
+.change-pass {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+.pass-change-label {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 10px 0 5px;
+}
+.pass-change-input {
+    width: 250px;
+    height: 40px;
+}
+.info-item {
+    display: flex;
+    grid-gap: 10px;
+}
+.info-label {
+    font-size: 15px;
+    font-weight: 600;
+}
+.btnChange {
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    font-weight: 600;
+    color: white;
+    background: black;
+    border-radius: 5px;
+    text-align: center;
+    align-content: center;
+}
+.about-header {
+    display: flex;
+    justify-content: space-around;
+    background: #f7f9fa;
+}
+.about-header img {
+    width: 50%;
+    height: 400px;
+}
+.about-header p {
+    margin: 100px 50px 0;
+    font-size: 40px;
+    font-weight: 600;
+
+}
+.about-header-bottom {
+    height: 50px;
+    background: #1c1d1f;
+}
+.about-content {
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about-content h1 {
+  
+    font-weight: 600;
+}
+.about-content h4 {
+    padding: 0 100px;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }

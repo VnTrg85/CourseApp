@@ -10,42 +10,60 @@
 namespace CoursWeb {
     
     
-    public partial class SiteMaster {
+    public partial class UserInfo {
         
         /// <summary>
-        /// searchBox control.
+        /// gvEnrols control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox searchBox;
+        protected global::System.Web.UI.WebControls.GridView gvEnrols;
         
         /// <summary>
-        /// login control.
+        /// OldPass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton login;
+        protected global::System.Web.UI.WebControls.TextBox OldPass;
         
         /// <summary>
-        /// logout control.
+        /// NewPass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton logout;
+        protected global::System.Web.UI.WebControls.TextBox NewPass;
         
         /// <summary>
-        /// MainContent control.
+        /// ConfPass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.TextBox ConfPass;
+        
+        /// <summary>
+        /// errMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label errMsg;
+        
+        /// <summary>
+        /// btnChangePass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnChangePass;
     }
 }
