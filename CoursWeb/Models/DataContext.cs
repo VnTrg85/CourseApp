@@ -11,5 +11,9 @@ namespace CoursWeb.Models
         public DbSet<Course> Courses { get; set; }
         public DbSet<Lesson> Lessons { get; set; }
         public DbSet<Account> Accounts { get; set; }
+        public DbSet<Enrolment> Enrolments { get; set; }
+        public DbSet<Quiz> Quizs { get; set; }
+        public DbSet<QuizDetail> QuizDetails { get; set; }
+
     }
 }
