@@ -18,6 +18,7 @@ namespace CoursWeb
             string username = Username.Text;
             string password = Password.Text;
             string email = Email.Text;
+
             var _db = new CoursWeb.Models.DataContext();
             IQueryable<Account> query = _db.Accounts;
             query = query.Where(p => p.Username == username || p.Email == email);

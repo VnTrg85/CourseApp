@@ -14,8 +14,13 @@ namespace CoursWeb
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            Check_Login();
+            Check_Login();            
             
+        }
+        protected void Home_Click(object sender,EventArgs e)
+        {
+            Session["queryString"] = "";
+            Response.Redirect("/");
         }
         private void Check_Login()
         {
@@ -44,22 +49,30 @@ namespace CoursWeb
             if (Session["Username"] == null)
                 Response.Redirect("/login");
             else
-                Response.Redirect("/");
+            {
+                Session["Info"] = null;
+                Session["cart"] = true;
+                Response.Redirect("/userinfo");
+            }
+              
         }
-        protected void Logout_Click(object sender,EventArgs e)
-        {
-            Session["Username"] = null;
-            Response.Redirect("/");
-        }
-        protected void Logout_Quanly_Click(object sender, EventArgs e)
+        
+        protected void Signup_Quanly_Click(object sender, EventArgs e)
         {
             if (Session["Username"] == null)
                 Response.Redirect("/signup");
             else
             {         
-                Response.Redirect("/quanly");
+                Response.Redirect("/quanly");              
             }
         }
+        protected void Search_Click(object sender,EventArgs e)
+        {
+            string queyString = searchBox.Text;
+            Session["queryString"] = queyString;
+            Response.Redirect("/");
+        }
 
+       
     }
 }

@@ -36,5 +36,30 @@ namespace CoursWeb
             query = query.Where(p => p.CourseID == courseId);         
             return query;
         }
+        public void AddToCart_Click(object sender,EventArgs e)
+        {
+            if(Session["Username"] != null)
+            {
+                int courseId = Convert.ToInt32(Request.QueryString["courseId"]);
+                var enrol = new Enrolment
+                {
+                    Enrolment_date = DateTime.Now,
+                    Completed_date = DateTime.Now,
+                    AccountID = Convert.ToInt32(Session["UserID"].ToString()),
+                    CourseID = courseId
+                };
+                var _db = new CoursWeb.Models.DataContext();
+                _db.Enrolments.Add(enrol);
+                _db.SaveChanges();
+                Session["Info"] = false;
+                Session["Cart"] = true;
+                Response.Redirect("/userinfo");
+            }else
+            {
+                Response.Redirect("/login");
+            }
+            
+        }
+        
     }
 }
