@@ -72,13 +72,22 @@ namespace CoursWeb
 
             using (var context = new DataContext())
             {
-                var category = context.Categories.Find(categoryId);
-                if (category != null)
+                var courseExists= context.Courses.Any(c => c.CategoryID==categoryId);
+                if (courseExists)
                 {
-                    context.Categories.Remove(category);
-                    context.SaveChanges();
+                    ErrorLabel.Text = "Danh mục hiện đang có khóa học, không thể xóa";
                 }
-                context.Database.ExecuteSqlCommand("DBCC CHECKIDENT('Categories', RESEED, 0)");
+                else
+                {
+
+                    var category = context.Categories.Find(categoryId);
+                    if (category != null)
+                    {
+                        context.Categories.Remove(category);
+                        context.SaveChanges();
+                    }
+                    context.Database.ExecuteSqlCommand("DBCC CHECKIDENT('Categories', RESEED, 0)");
+                }
             }
             BindGridView();
         }
