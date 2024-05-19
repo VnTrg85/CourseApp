@@ -217,11 +217,19 @@ namespace CoursWeb
 
             using (var context = new DataContext())
             {
-                var lesson = context.Lessons.Find(lessonId);
-                if (lesson != null)
+                var quizExists = context.Quizs.Any(q => q.LessonID == lessonId);
+                if (quizExists)
                 {
-                    context.Lessons.Remove(lesson);
-                    context.SaveChanges();
+                    ErrorLabel.Text = "Còn câu hỏi trong bài học không thể xóa được";
+                }
+                else
+                {
+                    var lesson = context.Lessons.Find(lessonId);
+                    if (lesson != null)
+                    {
+                        context.Lessons.Remove(lesson);
+                        context.SaveChanges();
+                    }
                 }
             }
             LoadLessonsForSelectedCourse();
