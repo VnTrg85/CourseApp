@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CoursesWeb</title>
-
+    <link rel="stylesheet" href="css/style.css" />
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
@@ -41,7 +41,16 @@
         <div class= "container">
             <div class="header">
                 <h1 class="title"><a class="link" href="/">UCourse</a></h1>
-                <p class="cat">Categories</p>
+                <ul id="menu">
+                    <li>
+                        <a class="cat">Catagories</a>
+                        <ul class="sub-menu">
+                            <li><a href="ManagerCatagories.aspx?CategoryID=1">CNTT</a>
+                            </li>
+                            <li><a href="ManagerCatagories.aspx?CategoryID=2">QTKD</a></li>
+                        </ul>
+                    </li>
+                </ul>
                 <input class="search-input" placeholder="Search for courses" type="text"/>
                 <a class="link" href="/about">About</a>
                 <a class="link" href="/contact">Contact</a> 
