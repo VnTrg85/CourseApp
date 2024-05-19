@@ -15,15 +15,6 @@ namespace CoursWeb
     {
 
         /// <summary>
-        /// GridView1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
-
-        /// <summary>
         /// ButtonAddNew control.
         /// </summary>
         /// <remarks>
@@ -78,6 +69,15 @@ namespace CoursWeb
         protected global::System.Web.UI.WebControls.Button ButtonCancel;
 
         /// <summary>
+        /// GridView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
+
+        /// <summary>
         /// DropdownCourses control.
         /// </summary>
         /// <remarks>
@@ -85,15 +85,6 @@ namespace CoursWeb
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropdownCourses;
-
-        /// <summary>
-        /// GridViewLessons control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewLessons;
 
         /// <summary>
         /// ButtonAddNewLesson control.
@@ -157,6 +148,15 @@ namespace CoursWeb
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ButtonCancelLesson;
+
+        /// <summary>
+        /// GridViewLessons control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridViewLessons;
 
         /// <summary>
         /// ErrorLabel control.
