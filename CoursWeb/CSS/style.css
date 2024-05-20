@@ -1,0 +1,525 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    width: 100%;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+    .link:hover {
+        text-decoration: none;
+    }
+
+.mb2 {
+    margin-bottom: 2px;
+}
+
+.container {
+    width: 1028px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+    width: 100%;
+    padding: 20px 0;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 900;
+    margin: 0px 20px 0px 0;
+    cursor: pointer;
+}
+
+.cat {
+    font-size: 15px;
+    margin: 0;
+    cursor: pointer;
+}
+
+
+.search-input {
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    outline: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid #333;
+}
+
+.btn-login {
+    color: black;
+    background: white;
+    border: 1px solid black;
+    width: 90px;
+    height: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-signup {
+    color: white;
+    background: black;
+    width: 90px;
+    height: 40px;
+    outline: none;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeImg {
+    width: 142.5%;
+    margin-left: -210px;
+}
+
+.courseContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-gap: 20px;
+}
+
+.courseItem {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #c333;
+}
+
+.homeTitle {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.courseImg {
+    width: 100%;
+    height: 300px;
+}
+
+.courseName {
+    text-align: center;
+}
+
+.courseName, .coursePrice {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.coursePrice {
+    color: #608158;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+.loginContainer {
+    margin-top: 30px;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f1ebf5;
+}
+
+.loginTitle {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 0px;
+}
+
+.loginSubTitle {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.loginContainer input {
+    width: 40%;
+    height: 50px;
+    outline: none;
+    border: 1px solid #c3333;
+    border-radius: 5px;
+    padding: 0 5px;
+    margin: 5px 0;
+}
+
+.login-btn {
+    margin-top: 5px;
+    width: 40%;
+    height: 45px;
+    background: #a535f0;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-btn img {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+
+.courseDetail {
+    display: flex;
+    flex-direction: column;
+}
+
+.detailTop {
+    display: flex;
+    grid-gap: 20px;
+    justify-content: space-between;
+}
+
+    .detailTop img {
+        width: 40%;
+        height: 300px;
+    }
+
+.nameanddesc {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+}
+
+.courseDetailName {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.courseDesc {
+    width: 80%;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.detailBottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lessonHeader {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.lessonContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 5px;
+}
+
+.lessonItem {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    grid-gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    border: 1px solid #d1d7db;
+    background: #f7f9fa;
+}
+
+.lessonName {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.lessonDesc {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.buttons {
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 5px;
+}
+
+.addCartBtn {
+    width: 300px;
+    height: 50px;
+    background: #a535f0;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    font-weight: 800;
+    align-content: center;
+    text-align: center;
+}
+
+.buyBtn {
+    width: 300px;
+    height: 50px;
+    background: white;
+    color: black;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid #2d2f31;
+    font-weight: 800;
+}
+
+.userContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.userLeft {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 10px;
+    flex: 1;
+    padding-top: 10px;
+    border-radius: 5px;
+}
+
+.btn-User {
+    padding: 10px 10px;
+    width: 200px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 1px solid #d1d7db;
+}
+
+.userRight {
+    margin-top: 20px;
+    flex: 3;
+}
+
+.header-table {
+    color: white;
+    background: #6f7bd8;
+    padding-left: 2px;
+    height: 50px;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.item-table {
+    padding: 10px 2px;
+    text-align: center;
+    background: white;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.info-user {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #d1d7db;
+    border-radius: 5px;
+    padding: 0 0 20px;
+}
+
+.change-pass {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pass-change-label {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 10px 0 5px;
+}
+
+.pass-change-input {
+    width: 250px;
+    height: 40px;
+}
+
+.info-item {
+    display: flex;
+    grid-gap: 10px;
+}
+
+.info-label {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.btnChange {
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    font-weight: 600;
+    color: white;
+    background: black;
+    border-radius: 5px;
+    text-align: center;
+    align-content: center;
+}
+
+.about-header {
+    display: flex;
+    justify-content: space-around;
+    background: #f7f9fa;
+}
+
+    .about-header img {
+        width: 50%;
+        height: 400px;
+    }
+
+    .about-header p {
+        margin: 100px 50px 0;
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+.about-header-bottom {
+    height: 50px;
+    background: #1c1d1f;
+}
+
+.about-content {
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    .about-content h1 {
+        font-weight: 600;
+    }
+
+    .about-content h4 {
+        padding: 0 100px;
+        font-size: 18px;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+
+.gridview-quiz {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+    .gridview-quiz th, .gridview-quiz td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+
+    .gridview-quiz th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+
+/* Style for buttons */
+.gridview-button {
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 2px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border-radius: 4px;
+}
+
+    .gridview-button:hover {
+        background-color: #45a049;
+    }
+
+.edit-button {
+    background-color: #008CBA; /* Blue */
+}
+
+    .edit-button:hover {
+        background-color: #007BB5;
+    }
+
+.delete-button {
+    background-color: #f44336; /* Red */
+}
+
+    .delete-button:hover {
+        background-color: #e41f1f;
+    }
+
+/* Panel styling */
+.panel-add-edit {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+}
+
+    /* Input styling */
+    .panel-add-edit input[type="text"], .panel-add-edit select {
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0;
+        box-sizing: border-box;
+    }
+
+    .panel-add-edit button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+    }
+
+        .panel-add-edit button:hover {
+            background-color: #45a049;
+        }
+
+/* Error message styling */
+.error-label {
+    color: red;
+    margin-top: 10px;
+}
