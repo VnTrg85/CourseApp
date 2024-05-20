@@ -258,7 +258,6 @@ namespace CoursWeb
 
         private void ClearLessonForm()
         {
-            TextLessonID.Text = "";
             TextLessonName.Text = "";
             TextLessonURL.Text = "";
         }
@@ -267,8 +266,6 @@ namespace CoursWeb
         {
             try
             {
-
-                int lessonID = Convert.ToInt32(TextLessonID.Text);
                 string lessonName = TextLessonName.Text;
                 string lessonURL = TextLessonURL.Text;
                 if (string.IsNullOrEmpty(lessonName) || string.IsNullOrEmpty(lessonURL))
@@ -276,10 +273,12 @@ namespace CoursWeb
                     ErrorLabel.Text = "Vui lòng điền đầy đủ thông tin bài học.";
                     return;
                 }
+                int lastLessonID;
                 int selectedCourseID = Convert.ToInt32(DropdownCourses.SelectedValue);
                 using (var context = new DataContext())
                 {
-                    var existingLesson = context.Lessons.FirstOrDefault(l => l.LessonID == lessonID);
+                    lastLessonID = context.Lessons.OrderByDescending(c => c.LessonID).FirstOrDefault()?.LessonID ?? 0;
+                    var existingLesson = context.Lessons.FirstOrDefault(l => l.LessonID == lastLessonID+1);
                     if (existingLesson != null)
                     {
                         ErrorLabel.Text = "LessonID đã tồn tại. Vui lòng chọn một LessonID khác.";
@@ -288,7 +287,7 @@ namespace CoursWeb
                     var course = context.Courses.FirstOrDefault(c => c.CourseID == selectedCourseID);
                     var newLesson = new Lesson()
                     {
-                        LessonID = lessonID,
+                        LessonID = lastLessonID+1,
                         LessonName = lessonName,
                         Lesson_URL = lessonURL,
                         Description = course.Description,

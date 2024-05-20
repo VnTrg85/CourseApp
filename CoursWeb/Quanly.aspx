@@ -54,7 +54,6 @@
             <asp:Button ID="ButtonAddNewLesson" runat="server" Text="Add New Lesson" OnClick="ButtonAddNewLesson_Click" CssClass="gridview-button" Visible="false" />
             <asp:Panel ID="PanelAddEditLesson" runat="server" Visible="False" CssClass="panel-add-edit">
                 <h2>Add New Lesson</h2>
-                <asp:TextBox ID="TextLessonID" runat="server" Placeholder="Lesson ID"></asp:TextBox>
                 <asp:TextBox ID="TextLessonName" runat="server" placeholder="Lesson Name"></asp:TextBox>
                 <asp:TextBox ID="TextLessonURL" runat="server" placeholder="Lesson URL"></asp:TextBox>
                 <asp:Button ID="ButtonSaveLesson" runat="server" Text="Save" OnClick="ButtonSaveLesson_Click" CssClass="gridview-button" />
