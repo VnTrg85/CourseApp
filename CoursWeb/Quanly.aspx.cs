@@ -90,6 +90,7 @@ namespace CoursWeb
                 }
             }
             BindGridView();
+            Response.Redirect(Request.Url.AbsoluteUri);
         }
         protected void ButtonAddNew_Click(object sender, EventArgs e)
         {
@@ -129,8 +130,6 @@ namespace CoursWeb
             {
 
             }
-
-
         }
         protected void ButtonCancel_Click(object sender, EventArgs e)
         {
@@ -253,6 +252,7 @@ namespace CoursWeb
             }
             else
             {
+                PanelAddEditLesson.Visible = false;
             }
         }
 
@@ -268,26 +268,26 @@ namespace CoursWeb
             {
                 string lessonName = TextLessonName.Text;
                 string lessonURL = TextLessonURL.Text;
-                if (string.IsNullOrEmpty(lessonName) || string.IsNullOrEmpty(lessonURL))
-                {
-                    ErrorLabel.Text = "Vui lòng điền đầy đủ thông tin bài học.";
-                    return;
-                }
-                int lastLessonID;
                 int selectedCourseID = Convert.ToInt32(DropdownCourses.SelectedValue);
                 using (var context = new DataContext())
                 {
-                    lastLessonID = context.Lessons.OrderByDescending(c => c.LessonID).FirstOrDefault()?.LessonID ?? 0;
-                    var existingLesson = context.Lessons.FirstOrDefault(l => l.LessonID == lastLessonID+1);
-                    if (existingLesson != null)
+                    var usedLessonID = context.Lessons.Where(l => l.CourseID == selectedCourseID).Select(l =>l.LessonID).ToList();
+                    int newLessonID = 1;
+                    if (usedLessonID.Any())
                     {
-                        ErrorLabel.Text = "LessonID đã tồn tại. Vui lòng chọn một LessonID khác.";
-                        return;
+                        for(int i = 1;i<=usedLessonID.Max();i++)
+                        {
+                            if (!usedLessonID.Contains(i))
+                            {
+                                newLessonID = 1;
+                                break;
+                            }
+                        }
                     }
                     var course = context.Courses.FirstOrDefault(c => c.CourseID == selectedCourseID);
                     var newLesson = new Lesson()
                     {
-                        LessonID = lastLessonID+1,
+                        LessonID = newLessonID,
                         LessonName = lessonName,
                         Lesson_URL = lessonURL,
                         Description = course.Description,

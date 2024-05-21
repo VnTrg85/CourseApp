@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ManagerCatagories.aspx.cs" Inherits="CoursWeb.ManagerCatagories" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1 class="largesi">
-        Khóa Học <%= Request.QueryString["CategoryID"] == "1" ? "Công Nghệ Thông Tin" : "Quản Trị Kinh Doanh" %>
+           Khóa học <%= categoryName %>
     </h1>
     <h2 class="smallsi">Các Khóa học để bắt đầu</h2>
     <div>

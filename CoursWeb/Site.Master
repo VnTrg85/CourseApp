@@ -44,10 +44,7 @@
                 <ul id="menu">
                     <li>
                         <a class="cat">Catagories</a>
-                        <ul class="sub-menu">
-                            <li><a href="ManagerCatagories.aspx?CategoryID=1">CNTT</a>
-                            </li>
-                            <li><a href="ManagerCatagories.aspx?CategoryID=2">QTKD</a></li>
+                        <ul class="sub-menu" runat="server" id="subMenu">                  
                         </ul>
                     </li>
                 </ul>
