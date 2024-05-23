@@ -9,7 +9,7 @@
              <asp:LinkButton ID="LinkButtonToggleAccManagement" runat="server" Text="Quản Lý Accounts" CssClass="btn-User link" OnClick="LinkButtonToggleAccManagement_Click"/>
              <asp:LinkButton ID="LinkButtonToggleQuizManagement" runat="server" Text="Quản Lý Quizs" CssClass="btn-User link" OnClick="LinkButtonToggleQuizManagement_Click"/>
              <asp:LinkButton ID="LinkButtonToggleQuizDetailManagement" runat="server" Text="Quản Lý Quiz Details" CssClass="btn-User link" OnClick="LinkButtonToggleQuizDetailManagement_Click"/>
-             <asp:LinkButton ID="LinkButtonToggleEnrolManagement" runat="server" Text="Quản Lý En<a href="Quanly.aspx">Quanly.aspx</a>rolments" CssClass="btn-User link" OnClick="LinkButtonToggleEnrolManagement_Click"/>
+             <asp:LinkButton ID="LinkButtonToggleEnrolManagement" runat="server" Text="Quản Lý Enrolments" CssClass="btn-User link" OnClick="LinkButtonToggleEnrolManagement_Click"/>
         </div>
         <div class="userRight">        
 

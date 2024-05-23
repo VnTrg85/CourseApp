@@ -820,6 +820,16 @@ namespace CoursWeb
             ErrorLabelQuiz.Text = "";
 
             int quizID = Convert.ToInt32(GridViewQuiz.DataKeys[e.RowIndex].Value);
+            using (var _db = new DataContext())
+            {
+                var quizDetails = _db.QuizDetails.Where(p => p.QuizDetailID == quizID);
+                if (quizDetails.Count() > 0)
+                {
+                    ErrorLabelQuiz.Text = "That Quiz can not be deleted because there are some Quiz Detail relevant to Quiz";
+                    return;
+                }
+               
+            }
 
             using (var _db = new DataContext())
             {

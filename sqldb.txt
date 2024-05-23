@@ -1,0 +1,57 @@
+create PROC getCartByUserID @UserID int
+as 
+begin
+select Courses.CourseID,Courses.CourseName,count(Enrolments.EnrolmentID) as SL,Courses.Price,count(Enrolments.EnrolmentID) * Courses.Price AS Tongtien from Enrolments,Courses
+where Courses.CourseID = Enrolments.CourseID and Enrolments.AccountID = @UserID
+group by Courses.CourseID,CourseName,Price
+end
+
+
+create PROC deleteCart
+@CourseID int , @AccountID int
+as 
+begin
+delete from Enrolments where Enrolments.AccountID = @AccountID AND Enrolments.CourseID = @CourseID
+end
+
+create proc changePass 
+@UserID int,
+@NewPassword nvarchar(100)
+as
+begin
+	update Accounts
+	set Password = @NewPassword
+	where AccountID = @UserID
+end
+
+
+create proc createQuiz
+@lessonID int,
+@number int
+as
+begin
+insert into Quizs
+values(@lessonID,@number)
+end
+
+create proc createCourse
+@CateID int,
+@Name nvarchar(100),
+@Desc nvarchar(2000),
+@Image nvarchar(100),
+@Price nvarchar(100)
+as
+begin
+insert into Courses
+values(@Name,@Desc,@Image,@Price,@CateID)
+end
+
+create proc createQuizDetail
+@quizID int,
+@question nvarchar(100),
+@answer nvarchar(100)
+as
+begin
+insert into QuizDetails
+values(@quizID,@question,@answer)
+end
