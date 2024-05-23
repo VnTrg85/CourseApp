@@ -31,8 +31,6 @@
         </div>
         <div class="buttons">
             <asp:LinkButton runat="server" CssClass="addCartBtn link" OnClick="AddToCart_Click">Add to cart</asp:LinkButton>
-            <button class="buyBtn">Buy now</button>
-
         </div>
     </div>
      

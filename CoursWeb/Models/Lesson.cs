@@ -23,7 +23,7 @@ namespace CoursWeb.Models
         [Required, StringLength(10000), Display(Name = "Lesson Video URL"), DataType(DataType.MultilineText)]
         public string Lesson_URL { get; set; }
 
-        [Required, StringLength(10000), Display(Name = "Course Description"), DataType(DataType.MultilineText)]
+        [Required, StringLength(10000), Display(Name = "Lesson Description"), DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
         public int? CourseID { get; set; }

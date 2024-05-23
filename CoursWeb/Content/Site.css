@@ -222,9 +222,10 @@ textarea {
    justify-content: space-between;
 }
 .lessonHeader {
-    font-size:20px;
+    font-size: 20px;
     font-weight: 700;
     margin-bottom: 10px;
+    margin-top: 20px;
 }
 .lessonContainer {
     width: 50%;
@@ -404,4 +405,294 @@ textarea {
     font-size: 18px;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.gridview-quiz {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+    .gridview-quiz th, .gridview-quiz td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+
+    .gridview-quiz th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+
+/* Style for buttons */
+.gridview-button {
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 2px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border-radius: 4px;
+}
+
+    .gridview-button:hover {
+        background-color: #45a049;
+    }
+
+.edit-button {
+    mar
+    background-color: #008CBA; /* Blue */
+}
+
+    .edit-button:hover {
+        background-color: #007BB5;
+    }
+
+.delete-button {
+    background-color: #f44336; /* Red */
+}
+
+    .delete-button:hover {
+        background-color: #e41f1f;
+    }
+
+/* Panel styling */
+.panel-add-edit {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+}
+
+    /* Input styling */
+    .panel-add-edit input[type="text"], .panel-add-edit select {
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0;
+        box-sizing: border-box;
+    }
+
+    .panel-add-edit button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+    }
+
+        .panel-add-edit button:hover {
+            background-color: #45a049;
+        }
+
+/* Error message styling */
+.error-label {
+    color: red;
+    margin-top: 10px;
+}
+
+.text {
+    width: 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+
+#menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    #menu li {
+        position: relative;
+    }
+
+        #menu li a {
+            color: #000000;
+            display: block;
+            padding: 18px 20px;
+            text-decoration: none;
+        }
+
+    #menu ul.sub-menu {
+        position: absolute;
+        background-color: white;
+        padding: 15px 0px;
+        list-style: none;
+        width: 200px;
+        border: 1px solid white;
+        display: none;
+    }
+
+    #menu li:hover > ul.sub-menu {
+        display: block;
+    }
+
+    #menu ul.sub-menu a {
+        padding: 8px 15px;
+        border-bottom: 1px solid white;
+        left: 0;
+    }
+
+    #menu ul.sub-menu li:hover > a {
+        border-bottom: 1px solid #000000;
+    }
+
+    #menu ul.sub-menu li:last-child a {
+    }
+
+    #menu ul.sub-menu ul.sub-menu {
+        left: 200px;
+        top: -16px;
+    }
+
+    #menu > li > a {
+        position: relative;
+    }
+
+        #menu > li > a::before {
+            content: "";
+            height: 4px;
+            width: 0px;
+            background: #f00;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+    #menu > li:hover > a::before {
+        width: 100%;
+    }
+
+    #menu .sub-menu li:hover > a {
+        color: #f00
+    }
+
+    #menu .sub-menu > li.has-child::after {
+        font: var(--fa-font-solid);
+        content: '\f105';
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        padding: 8px 0px;
+    }
+
+    #menu .sub-menu > li.has-child:hover::after {
+        color: #f00
+    }
+
+#menu-QL {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    #menu-QL li {
+        position: relative;
+    }
+
+        #menu-QL li a {
+            color: #000000;
+            display: block;
+            padding: 18px 20px;
+            text-decoration: none;
+        }
+
+    #menu-QL > li:hover > a {
+        color: #f00;
+    }
+
+.largesi {
+    font-family: var(--font-stack-heading-serif);
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 1.25;
+    letter-spacing: -.016rem;
+    max-width: 36em;
+    margin: 0 0 4.8rem;
+    max-width: 100%;
+}
+
+.smallsi {
+    font-family: var(--font-stack-heading);
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    letter-spacing: 0;
+    max-width: 36em;
+    margin: 0 0 1.6rem;
+}
+
+.lite {
+    margin-top: .8rem;
+    color: #6a6f73;
+}
+
+#menu1 {
+    list-style: none;
+}
+
+    #menu1 li {
+        position: relative;
+    }
+
+        #menu1 li a {
+            color: #000000;
+            display: block;
+            padding: 18px 20px;
+            text-decoration: none;
+        }
+
+.myrow {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) *-1);
+}
+
+.coltrai {
+    flex: 0 0 auto;
+    width: 30%;
+}
+
+.colphai {
+    flex: 0 0 auto;
+    width: 70%;
+}
+
+.gridview-button {
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 2px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border-radius: 4px;
+}
+
+.panel-add-edit input[type="text"], .panel-add-edit select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+.panel-add-edit button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.error-label {
+    color: red;
+    margin-top: 10px;
 }

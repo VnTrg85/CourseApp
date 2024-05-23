@@ -41,7 +41,13 @@
         <div class= "container">
             <div class="header">
                 <h1 class="title"><asp:LinkButton runat="server" OnClick="Home_Click" CssClass="link">UCourse</asp:LinkButton></h1>
-                <p class="cat">Categories</p>
+                <ul id="menu">
+                    <li>
+                        <a class="cat">Catagories</a>
+                        <ul class="sub-menu" runat="server" id="subMenu">                  
+                        </ul>
+                    </li>
+                </ul>
                 <asp:TextBox runat="server" ID="searchBox" CssClass="search-input" KeyDown="search_function"></asp:TextBox>   
                 <asp:LinkButton runat="server" CssClass="search-btn" OnClick="Search_Click"><img src="https://cdn-icons-png.freepik.com/256/711/711319.png?semt=ais_hybrid"/></asp:LinkButton>
                 <a class="link" href="/about">About</a>
